@@ -10,24 +10,36 @@
     <Border Background="#303030">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="60"/>
-                <RowDefinition/>
+                <RowDefinition Height="69" />
+                <RowDefinition />
             </Grid.RowDefinitions>
 
-            <StackPanel Grid.Row="0" Grid.Column="0" Background="#202020"/>
-            <TextBlock Text="BetterMC" Foreground="White" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Poppins" FontWeight="Bold"></TextBlock>
-            <StackPanel Grid.Row="1" Background="#202020" >
-                <RadioButton Content="HOME" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins" FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}"/>
-                <RadioButton Content="INSTALL" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins" FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}"/>
-                <RadioButton Content="BLOOMWARE" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins" FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}"/>
+            <StackPanel Grid.Row="0" Grid.Column="0" Background="#202020" />
+            <TextBlock Text="BetterMC" Foreground="White" FontSize="30" VerticalAlignment="Center"
+                       HorizontalAlignment="Center" FontFamily="Poppins" FontWeight="Bold" Height="46"
+                       Margin="28,8,28,15" Width="144">
+            </TextBlock>
+            <StackPanel Grid.Row="1" Background="#202020">
+                <RadioButton Content="HOME" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" />
+                <RadioButton Content="INSTALL" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" />
+                <RadioButton Content="BLOOMWARE" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" />
             </StackPanel>
-            <StackPanel Grid.Column="1" Background="#252525"/>
-            <Label x:Name="account_login" Content="Account login" Grid.Column="1" HorizontalAlignment="Left" Margin="60,0,0,0" VerticalAlignment="Top" Height="40" Width="215" FontFamily="Poppins Light" Background="#FF252525" Foreground="White" FontSize="20"/>
-            <Label x:Name="account_type" Content="Account type" Grid.Column="1" HorizontalAlignment="Left" Margin="60,22,0,0" VerticalAlignment="Top" Width="148" FontFamily="Poppins ExtraLight" FontSize="14" Foreground="Gray"/>
+            <StackPanel Grid.Column="1" Background="#252525" />
+            <Label x:Name="account_login" Content="Account login" Grid.Column="1" HorizontalAlignment="Left"
+                   Margin="77,7,0,0" VerticalAlignment="Top" Height="40" Width="215" FontFamily="Poppins Light"
+                   Background="#FF252525" Foreground="White" FontSize="20" />
+            <Label x:Name="account_type" Content="Account type" Grid.Column="1" HorizontalAlignment="Left"
+                   Margin="77,28,0,0" VerticalAlignment="Top" Width="148" FontFamily="Poppins ExtraLight" FontSize="14"
+                   Foreground="Gray" Height="31" />
+            <Image Grid.Column="1" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="52"
+                   Margin="20,6,0,0" Source="Assets/acc3.png" IsHitTestVisible="False" Stretch="Fill" Cursor="None" />
         </Grid>
     </Border>
 </Window>
