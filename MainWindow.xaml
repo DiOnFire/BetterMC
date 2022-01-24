@@ -5,20 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BetterMC"
         mc:Ignorable="d"
-        Title="BetterMC - Minecraft launcher" Height="720" Width="1280" ResizeMode="NoResize"
+        Title="BetterMC - Minecraft launcher" Height="719" Width="1280" ResizeMode="NoResize"
         WindowStyle="None" Background="Transparent" AllowsTransparency="True">
     <Border Background="#303030">
-        <Grid>
+        <Grid RenderTransformOrigin="0.493,0.631">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="69" />
-                <RowDefinition />
+                <RowDefinition Height="579*" />
+                <RowDefinition Height="62*"/>
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0" Grid.Column="0" Background="#202020" />
+            <StackPanel Grid.Row="2" Grid.Column="0" Background="#202020">
+                <RadioButton Content="SETTINGS" Height="60" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" Grid.Column="1" Background="#252525" Height="63" VerticalAlignment="Bottom">
+                <Button x:Name="launch_button" Content="LAUNCH" Height="54" Margin="254,4,0,0" RenderTransformOrigin="1.214,0.574" HorizontalAlignment="Left" Width="545" Style="{StaticResource ModernButton}"
+                        Background="#FF2EAA00" BorderBrush="#FF252525" Foreground="White" FontFamily="Poppins SemiBold" FontSize="36" VerticalAlignment="Top" />
+            </StackPanel>
             <TextBlock Text="BetterMC" Foreground="White" FontSize="30" VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Poppins" FontWeight="Bold" Height="46"
                        Margin="28,8,28,15" Width="144">
@@ -39,7 +48,7 @@
                    Margin="77,28,0,0" VerticalAlignment="Top" Width="148" FontFamily="Poppins ExtraLight" FontSize="14"
                    Foreground="Gray" Height="31" />
             <Image Grid.Column="1" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="52"
-                   Margin="20,6,0,0" Source="Assets/acc3.png" IsHitTestVisible="False" Stretch="Fill" Cursor="None" />
+                   Margin="20,6,0,0" Source="Assets/account.png" IsHitTestVisible="False" Stretch="Fill" Cursor="None" />
         </Grid>
     </Border>
 </Window>
