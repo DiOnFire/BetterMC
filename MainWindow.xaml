@@ -26,7 +26,7 @@
             </StackPanel>
             <StackPanel Grid.Row="2" Grid.Column="1" Background="#252525" Height="63" VerticalAlignment="Bottom">
                 <Button x:Name="launch_button" Content="LAUNCH" Height="54" Margin="254,4,0,0" RenderTransformOrigin="1.214,0.574" HorizontalAlignment="Left" Width="545" Style="{StaticResource ModernButton}"
-                        Background="#FF2EAA00" BorderBrush="#FF252525" Foreground="White" FontFamily="Poppins SemiBold" FontSize="36" VerticalAlignment="Top" />
+                        BorderBrush="#FF252525" Foreground="White" FontFamily="Poppins SemiBold" FontSize="36" VerticalAlignment="Top" Click="OnLaunchButtonClick" />
             </StackPanel>
             <TextBlock Text="BetterMC" Foreground="White" FontSize="30" VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Poppins" FontWeight="Bold" Height="46"
@@ -34,7 +34,7 @@
             </TextBlock>
             <StackPanel Grid.Row="1" Background="#202020">
                 <RadioButton Content="HOME" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
-                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" IsChecked="True"/>
                 <RadioButton Content="INSTALLATIONS" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
                              FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
                 <RadioButton x:Name="alts_button" Content="ALTS" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
@@ -42,7 +42,7 @@
                 <RadioButton Content="BLOOMWARE" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
                              FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
             </StackPanel>
-            <StackPanel Grid.Column="1" Background="#252525" />
+            <StackPanel x:Name="upper_stackpanel" Grid.Column="1" Background="#252525" MouseDown="OnMouseDownUpperStackPanel" />
             <Label x:Name="account_login" Content="Account login" Grid.Column="1" HorizontalAlignment="Left"
                    Margin="77,7,0,0" VerticalAlignment="Top" Height="40" Width="215" FontFamily="Poppins Light"
                    Background="#FF252525" Foreground="White" FontSize="20" />
