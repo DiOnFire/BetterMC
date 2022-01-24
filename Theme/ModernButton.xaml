@@ -11,12 +11,12 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Background" Value="#1dc400"/>
             <Setter Property="BorderThickness" Value="0"/>
         </Style.Setters>
         <Style.Triggers>
-            <Trigger Property="IsMouseCaptured" Value="True">
-                <Setter Property="Background" Value="#34c400"/>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#22e500"/>
             </Trigger>
         </Style.Triggers>
     </Style>

@@ -21,8 +21,8 @@
 
             <StackPanel Grid.Row="0" Grid.Column="0" Background="#202020" />
             <StackPanel Grid.Row="2" Grid.Column="0" Background="#202020">
-                <RadioButton Content="SETTINGS" Height="60" Foreground="White" FontSize="25" FontFamily="Poppins"
-                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}"/>
+                <RadioButton x:Name="settings_button" Content="SETTINGS" Height="62" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Grid.Column="1" Background="#252525" Height="63" VerticalAlignment="Bottom">
                 <Button x:Name="launch_button" Content="LAUNCH" Height="54" Margin="254,4,0,0" RenderTransformOrigin="1.214,0.574" HorizontalAlignment="Left" Width="545" Style="{StaticResource ModernButton}"
@@ -30,15 +30,17 @@
             </StackPanel>
             <TextBlock Text="BetterMC" Foreground="White" FontSize="30" VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Poppins" FontWeight="Bold" Height="46"
-                       Margin="28,8,28,15" Width="144">
+                       Margin="24,13,32,10" Width="144">
             </TextBlock>
             <StackPanel Grid.Row="1" Background="#202020">
                 <RadioButton Content="HOME" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
-                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" />
-                <RadioButton Content="INSTALL" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
-                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" />
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
+                <RadioButton Content="INSTALLATIONS" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
+                <RadioButton x:Name="alts_button" Content="ALTS" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                    FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
                 <RadioButton Content="BLOOMWARE" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
-                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" />
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
             </StackPanel>
             <StackPanel Grid.Column="1" Background="#252525" />
             <Label x:Name="account_login" Content="Account login" Grid.Column="1" HorizontalAlignment="Left"
@@ -49,6 +51,11 @@
                    Foreground="Gray" Height="31" />
             <Image Grid.Column="1" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="52"
                    Margin="20,6,0,0" Source="Assets/account.png" IsHitTestVisible="False" Stretch="Fill" Cursor="None" />
+            <Button x:Name="close_button" Content="X"  Style="{StaticResource ModernButton}"
+                        Background="#FF252525" BorderBrush="#FF252525" Foreground="White" FontFamily="Poppins SemiBold" FontSize="36" VerticalAlignment="Top" Grid.Column="1" Margin="1015,5,10,0" Click="OnCloseClick" />
+            <Button x:Name="minimize_button" Content="_"  Style="{StaticResource ModernButton}"
+                        Background="#FF252525" BorderBrush="#FF252525" Foreground="White" FontFamily="Poppins SemiBold" FontSize="36" VerticalAlignment="Top" Grid.Column="1" Margin="960,0,65,0" Click="OnMinimizeButtonClick" />
+
         </Grid>
     </Border>
 </Window>
