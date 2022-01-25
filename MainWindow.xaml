@@ -27,8 +27,8 @@
 
             <StackPanel Grid.Row="0" Grid.Column="0" Background="#202020" />
             <StackPanel Grid.Row="2" Grid.Column="0" Background="#202020">
-                <RadioButton x:Name="settings_button" Content="Settings" Height="62" Foreground="White" FontSize="25" FontFamily="Poppins"
-                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu"/>
+                <RadioButton x:Name="settings_left" Content="Settings" Height="62" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" Command="{Binding SettingsViewCommand}"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Grid.Column="1" Background="#252525" Height="63" VerticalAlignment="Bottom">
                 <Button x:Name="launch_button" Content="LAUNCH" Height="54" Margin="254,4,0,0" RenderTransformOrigin="1.214,0.574" HorizontalAlignment="Left" Width="545" Style="{StaticResource ModernButton}"
@@ -39,12 +39,12 @@
                        Margin="24,13,32,10" Width="144">
             </TextBlock>
             <StackPanel Grid.Row="1" Background="#202020">
-                <RadioButton Content="Home" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                <RadioButton x:Name="dashboard_left" Content="Home" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
                              FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" IsChecked="True" BorderThickness="0" Command="{Binding DashboardViewCommand}"/>
-                <RadioButton Content="Installations" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
-                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
-                <RadioButton x:Name="alts_button" Content="Alts" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
-                    FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
+                <RadioButton x:Name="installations_left" Content="Installations" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" Command="{Binding InstallationsViewCommand}" />
+                <RadioButton x:Name="alts_left" Content="Alts" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                    FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" Command="{Binding AltsViewCommand}" />
                 <RadioButton x:Name="bloomware_left" Content="Bloomware" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
                              FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" Command="{Binding BloomwareViewCommand}" />
             </StackPanel>

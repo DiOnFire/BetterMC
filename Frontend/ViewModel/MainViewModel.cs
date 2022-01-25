@@ -4,34 +4,23 @@ namespace BetterMC.Frontend.ViewModel
 {
     internal class MainViewModel : ObservableObject
     {
-        public RelayCommand BloomwareViewCommand
-        {
-            get; set;
-        }
+        public RelayCommand BloomwareViewCommand { get; set; }
+        public RelayCommand DashboardViewCommand { get; set; }
+        public RelayCommand AltsViewCommand { get; set; }
+        public RelayCommand InstallationsViewCommand { get; set; }
+        public RelayCommand SettingsViewCommand { get; set; }
 
-        public RelayCommand DashboardViewCommand
-        {
-            get; set;
-        }
-
-        public DashboardViewModel DashboardView
-        {
-            get; set;
-        }
-
-        public BloomwareViewModel BloomwareView
-        {
-            get; set;
-        }
+        public DashboardViewModel DashboardView { get; set; }
+        public BloomwareViewModel BloomwareView { get; set; }
+        public SettingsViewModel SettingsView { get; set; }
+        public InstallationsViewModel InstallationsView { get; set; }
+        public AltsViewModel AltsView { get; set; }
 
         private object currentView;
 
         public object CurrentView
         {
-            get
-            {
-                return currentView;
-            }
+            get { return currentView; }
             set
             {
                 currentView = value;
@@ -43,16 +32,17 @@ namespace BetterMC.Frontend.ViewModel
         {
             DashboardView = new DashboardViewModel();
             BloomwareView = new BloomwareViewModel();
+            SettingsView = new SettingsViewModel();
+            InstallationsView = new InstallationsViewModel();
+            AltsView = new AltsViewModel();
+
             CurrentView = DashboardView;
             
-            DashboardViewCommand = new RelayCommand(o =>
-            {
-                CurrentView = DashboardView;
-            });
-            BloomwareViewCommand = new RelayCommand(o =>
-            {
-                CurrentView = BloomwareView;
-            });
+            DashboardViewCommand = new RelayCommand(o => CurrentView = DashboardView);
+            BloomwareViewCommand = new RelayCommand(o => CurrentView = BloomwareView);
+            AltsViewCommand = new RelayCommand(o => CurrentView = AltsView);
+            InstallationsViewCommand = new RelayCommand(o => CurrentView = InstallationsView);
+            SettingsViewCommand = new RelayCommand(o => CurrentView = SettingsView);
         }
     }
 }

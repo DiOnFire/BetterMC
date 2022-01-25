@@ -3,11 +3,11 @@
 namespace BetterMC.Frontend.Views
 {
     /// <summary>
-    /// Логика взаимодействия для BloomwareView.xaml
+    /// Логика взаимодействия для InstallationsView.xaml
     /// </summary>
-    public partial class BloomwareView : UserControl
+    public partial class InstallationsView : UserControl
     {
-        public BloomwareView()
+        public InstallationsView()
         {
             InitializeComponent();
         }

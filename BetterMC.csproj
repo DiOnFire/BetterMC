@@ -50,6 +50,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Frontend\Views\AltsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Frontend\Views\InstallationsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Frontend\Views\SettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -59,7 +71,19 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="Frontend\ViewModel\AltsViewModel.cs" />
     <Compile Include="Frontend\ViewModel\BloomwareViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\InstallationsViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\SettingsViewModel.cs" />
+    <Compile Include="Frontend\Views\AltsView.xaml.cs">
+      <DependentUpon>AltsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Views\InstallationsView.xaml.cs">
+      <DependentUpon>InstallationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Frontend\Views\SettingsView.xaml.cs">
+      <DependentUpon>SettingsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

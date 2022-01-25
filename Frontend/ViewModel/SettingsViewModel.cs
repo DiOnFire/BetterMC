@@ -2,7 +2,7 @@
 
 namespace BetterMC.Frontend.ViewModel
 {
-    class BloomwareViewModel : ObservableObject
+    class SettingsViewModel : ObservableObject
     {
     }
 }
