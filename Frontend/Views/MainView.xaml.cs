@@ -1,18 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using BetterMC.Frontend.ViewModel;
-using System.Windows.Data;
-using System.Windows.Documents;
+﻿using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace BetterMC.Frontend.Views
 {
@@ -35,9 +22,14 @@ namespace BetterMC.Frontend.Views
             System.Diagnostics.Process.Start("https://github.com/DiOnFire/BetterMC");
         }
 
+        /*
+         * Executes when you click the Bloomware border.
+         * Opens Bloomware page in left menu.
+         */ 
         private void OnBloomwareButtonMouseClick(object sender, MouseButtonEventArgs e)
         {
-            new MainViewModel().CurrentView = new MainViewModel().BloomwareView;
+            ((MainWindow)System.Windows.Application.Current.MainWindow).bloomware_left.IsChecked = true;
+            ((MainWindow)System.Windows.Application.Current.MainWindow).bloomware_left.Command.Execute(0);
         }
     }
 }

@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:BetterMC.Frontend.Views"
              mc:Ignorable="d" 
              d:DesignHeight="569" d:DesignWidth="1060">
+
     <Grid>
         <StackPanel>
             <TextBlock Text="Welcome to BetterMC!" Foreground="White" FontSize="50" HorizontalAlignment="Center" FontFamily="Poppins" FontWeight="Bold"/>
