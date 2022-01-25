@@ -2,6 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:BetterMC"
+             xmlns:viewModel="clr-namespace:BetterMC.Frontend.ViewModel"
+             xmlns:view="clr-namespace:BetterMC.Frontend.Views"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -9,6 +11,13 @@
                 <ResourceDictionary Source="Theme/ScreenMenuButton.xaml"/>
                 <ResourceDictionary Source="Theme/ModernButton.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <DataTemplate DataType="{x:Type viewModel:DashboardViewModel}">
+                <view:MainView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewModel:BloomwareViewModel}">
+                <view:BloomwareView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -3,10 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BetterMC"
+        xmlns:local="clr-namespace:BetterMC.Frontend.ViewModel"
+        xmlns:viewModel="clr-namespace:BetterMC.Frontend.ViewModel"
         mc:Ignorable="d"
         Title="BetterMC - Minecraft launcher" Height="719" Width="1280" ResizeMode="NoResize"
         WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
     <Border Background="#303030">
         <Grid RenderTransformOrigin="0.493,0.631">
             <Grid.ColumnDefinitions>
@@ -21,7 +27,7 @@
 
             <StackPanel Grid.Row="0" Grid.Column="0" Background="#202020" />
             <StackPanel Grid.Row="2" Grid.Column="0" Background="#202020">
-                <RadioButton x:Name="settings_button" Content="SETTINGS" Height="62" Foreground="White" FontSize="25" FontFamily="Poppins"
+                <RadioButton x:Name="settings_button" Content="Settings" Height="62" Foreground="White" FontSize="25" FontFamily="Poppins"
                              FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu"/>
             </StackPanel>
             <StackPanel Grid.Row="2" Grid.Column="1" Background="#252525" Height="63" VerticalAlignment="Bottom">
@@ -33,14 +39,14 @@
                        Margin="24,13,32,10" Width="144">
             </TextBlock>
             <StackPanel Grid.Row="1" Background="#202020">
-                <RadioButton Content="HOME" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
-                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" IsChecked="True"/>
-                <RadioButton Content="INSTALLATIONS" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                <RadioButton Content="Home" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" IsChecked="True" BorderThickness="0" Command="{Binding DashboardViewCommand}"/>
+                <RadioButton Content="Installations" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
                              FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
-                <RadioButton x:Name="alts_button" Content="ALTS" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                <RadioButton x:Name="alts_button" Content="Alts" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
                     FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
-                <RadioButton Content="BLOOMWARE" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
-                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" />
+                <RadioButton Content="Bloomware" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource ScreenMenuButton}" GroupName="left_menu" Command="{Binding BloomwareViewCommand}" />
             </StackPanel>
             <StackPanel x:Name="upper_stackpanel" Grid.Column="1" Background="#252525" MouseDown="OnMouseDownUpperStackPanel" />
             <Label x:Name="account_login" Content="Account login" Grid.Column="1" HorizontalAlignment="Left"
@@ -56,6 +62,7 @@
             <Button x:Name="minimize_button" Content="_"  Style="{StaticResource ModernButton}"
                         Background="#FF252525" BorderBrush="#FF252525" Foreground="White" FontFamily="Poppins SemiBold" FontSize="36" VerticalAlignment="Top" Grid.Column="1" Margin="960,0,65,0" Click="OnMinimizeButtonClick" />
 
+            <ContentControl Grid.Row="1" Grid.Column="1" Margin="10" Content="{Binding CurrentView}"/>
         </Grid>
     </Border>
 </Window>

@@ -5,13 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BetterMC.MVVM.ViewModel
+namespace BetterMC.Frontend.ViewModel
 {
-    class MainViewModel : ObserableObject
+    class BloomwareViewModel : ObservableObject
     {
-        public MainViewModel()
-        {
-
-        }
     }
 }
