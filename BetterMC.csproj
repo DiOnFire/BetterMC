@@ -71,6 +71,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Core\RelayCommand.cs" />
+    <Compile Include="Frontend\Executor\MainButtonExecutor.cs" />
     <Compile Include="Frontend\ViewModel\AltsViewModel.cs" />
     <Compile Include="Frontend\ViewModel\BloomwareViewModel.cs" />
     <Compile Include="Frontend\ViewModel\InstallationsViewModel.cs" />
