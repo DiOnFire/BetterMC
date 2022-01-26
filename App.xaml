@@ -18,6 +18,18 @@
             <DataTemplate DataType="{x:Type viewModel:BloomwareViewModel}">
                 <view:BloomwareView/>
             </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:AltsViewModel}">
+                <view:AltsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:SettingsViewModel}">
+                <view:SettingsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewModel:InstallationsViewModel}">
+                <view:InstallationsView/>
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

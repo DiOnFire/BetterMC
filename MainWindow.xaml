@@ -33,6 +33,7 @@
             <StackPanel Grid.Row="2" Grid.Column="1" Background="#252525" Height="63" VerticalAlignment="Bottom">
                 <Button x:Name="launch_button" Content="LAUNCH" Height="54" Margin="254,4,0,0" RenderTransformOrigin="1.214,0.574" HorizontalAlignment="Left" Width="545" Style="{StaticResource ModernButton}"
                         BorderBrush="#FF252525" Foreground="White" FontFamily="Poppins SemiBold" FontSize="36" VerticalAlignment="Top" Click="OnLaunchButtonClick" />
+                <Button x:Name="new_alt" Content="NEW" Width="55" Height="55" Margin="600,-55,0,0" Style="{StaticResource ModernButton}" Foreground="White" FontFamily="Poppins SemiBold" FontSize="20" Visibility="Hidden"/>
             </StackPanel>
             <TextBlock Text="BetterMC" Foreground="White" FontSize="30" VerticalAlignment="Center"
                        HorizontalAlignment="Center" FontFamily="Poppins" FontWeight="Bold" Height="46"

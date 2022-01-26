@@ -1,4 +1,6 @@
 ﻿using BetterMC.Core;
+using BetterMC.Frontend.Executor;
+using static System.Windows.Application;
 
 namespace BetterMC.Frontend.ViewModel
 {
@@ -25,6 +27,7 @@ namespace BetterMC.Frontend.ViewModel
             {
                 currentView = value;
                 OnPropertyChanged();
+                if ((Current.MainWindow.DataContext as MainViewModel) != null) DownPanelExecutor.SwitchViewModel();
             }
         }
 

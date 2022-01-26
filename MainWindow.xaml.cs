@@ -1,4 +1,6 @@
-﻿namespace BetterMC
+﻿using BetterMC.Frontend.Executor;
+
+namespace BetterMC
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -34,7 +36,7 @@
          */ 
         private void OnLaunchButtonClick(object sender, System.Windows.RoutedEventArgs e)
         {
-            
+            DownPanelExecutor.SwitchViewModel();
         }
 
         /*
