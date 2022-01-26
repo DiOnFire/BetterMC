@@ -26,6 +26,7 @@ namespace BetterMC.Frontend.Executor
         {
             MainWindow window = Current.MainWindow as MainWindow;
             window.new_alt.Visibility = Visibility.Hidden;
+            window.configure_installation.Visibility = Visibility.Hidden;
             
             switch ((window?.DataContext as MainViewModel)?.CurrentView.GetType().Name)
             {
@@ -53,6 +54,7 @@ namespace BetterMC.Frontend.Executor
                 {
                     window.launch_button.Content = "LAUNCH";
                     window.launch_button.Background = new SolidColorBrush(Color.FromRgb(52, 209, 0));
+                    window.configure_installation.Visibility = Visibility.Visible;    
                     break;
                 }
             }

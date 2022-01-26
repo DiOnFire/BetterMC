@@ -9,9 +9,12 @@ namespace BetterMC.Frontend.Views
     /// </summary>
     public partial class MainView : UserControl
     {
+        private MainWindow window;
+
         public MainView()
         {
             InitializeComponent();
+            window = Current.MainWindow as MainWindow;
         }
 
         /*
@@ -29,8 +32,8 @@ namespace BetterMC.Frontend.Views
          */ 
         private void OnBloomwareButtonMouseClick(object sender, MouseButtonEventArgs e)
         {
-            ((MainWindow) Current.MainWindow).bloomware_left.IsChecked = true;
-            ((MainWindow) Current.MainWindow).bloomware_left.Command.Execute(0);
+            window.bloomware_left.IsChecked = true;
+            window.bloomware_left.Command.Execute(0);
         }
 
         /*
@@ -39,8 +42,8 @@ namespace BetterMC.Frontend.Views
          */
         private void OnSettingBoardMouseClick(object sender, MouseButtonEventArgs e)
         {
-            ((MainWindow) Current.MainWindow).settings_left.IsChecked = true;
-            ((MainWindow) Current.MainWindow).settings_left.Command.Execute(0);
+            window.settings_left.IsChecked = true;
+            window.settings_left.Command.Execute(0);
         }
 
         /*
@@ -49,8 +52,8 @@ namespace BetterMC.Frontend.Views
          */
         private void OnInstallationsBorderMouseClick(object sender, MouseButtonEventArgs e)
         {
-            ((MainWindow) Current.MainWindow).installations_left.IsChecked = true;
-            ((MainWindow) Current.MainWindow).installations_left.Command.Execute(0);
+            window.installations_left.IsChecked = true;
+            window.installations_left.Command.Execute(0);
         }
 
         /*
@@ -59,8 +62,8 @@ namespace BetterMC.Frontend.Views
          */
         private void OnAltsBorderMouseClick(object sender, MouseButtonEventArgs e)
         {
-            ((MainWindow) Current.MainWindow).alts_left.IsChecked = true;
-            ((MainWindow) Current.MainWindow).alts_left.Command.Execute(0);
+            window.alts_left.IsChecked = true;
+            window.alts_left.Command.Execute(0);
         }
     }
 }

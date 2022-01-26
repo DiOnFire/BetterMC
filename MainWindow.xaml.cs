@@ -47,5 +47,23 @@ namespace BetterMC
         {
             if (e.ChangedButton == System.Windows.Input.MouseButton.Left) this.DragMove();
         }
+
+        /*
+         * Executes when you click "new alt" button
+         * Opens "new alt" window
+         */ 
+        private void OnNewAltButtonClick(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+        }
+
+        /*
+         * Executes when you click "configure installation" button 
+         * Opens "installation's settings" window
+         */
+        private void OnConfigButtonClick(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+        }
     }
 }
