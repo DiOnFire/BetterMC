@@ -27,7 +27,8 @@ namespace BetterMC.Frontend.ViewModel
             {
                 currentView = value;
                 OnPropertyChanged();
-                if ((Current.MainWindow.DataContext as MainViewModel) != null) DownPanelExecutor.SwitchViewModel();
+                if ((Current.MainWindow.DataContext as MainViewModel) != null) new DownPanelExecutor().SwitchViewModel();
+
             }
         }
 
