@@ -70,6 +70,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Core\Installations\Installation.cs" />
+    <Compile Include="Core\Installations\InstallationType.cs" />
+    <Compile Include="Core\Installations\Types\FabricInstallation.cs" />
+    <Compile Include="Core\Installations\Types\ForgeInstallation.cs" />
+    <Compile Include="Core\Installations\Types\OtherInstallation.cs" />
+    <Compile Include="Core\Installations\Types\VanillaInstallation.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Frontend\Executor\DownPanelExecutor.cs" />
     <Compile Include="Frontend\ViewModel\AltsViewModel.cs" />
@@ -132,7 +138,10 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Core\Accounts\" />
+    <Folder Include="Core\Settings\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\account.png" />
   </ItemGroup>
