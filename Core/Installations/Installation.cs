@@ -4,9 +4,9 @@ namespace BetterMC.Core.Installations
 {
     abstract class Installation
     {
-        private string name { get; set; }
-        private string path { get; set; }
-        private InstallationType type { get; }
+        public string name { get; set; }
+        public string path { get; set; }
+        public InstallationType type { get; }
 
         public Installation(string name, InstallationType type, string path)
         {

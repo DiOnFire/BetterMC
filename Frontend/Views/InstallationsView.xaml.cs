@@ -1,4 +1,7 @@
-﻿using System.Windows.Controls;
+﻿using BetterMC.Core.Installations;
+using BetterMC.Core.Installations.Management;
+using System.Collections.Generic;
+using System.Windows.Controls;
 
 namespace BetterMC.Frontend.Views
 {
@@ -10,6 +13,19 @@ namespace BetterMC.Frontend.Views
         public InstallationsView()
         {
             InitializeComponent();
+            InitVersions();
+        }
+
+        private void InitVersions()
+        {
+            InstallationsLoader loader = new InstallationsLoader();
+            string mc = loader.FindMinecraft();
+            string[] versions = loader.GetVersionPaths(ref mc);
+            List<Installation> version = loader.LoadInstallations(versions);
+            foreach (Installation i in version)
+            {
+                ver.Content += $"\n{i.name} / {i.type}";
+            }
         }
     }
 }
