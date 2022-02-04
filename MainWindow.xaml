@@ -58,7 +58,7 @@
                    Margin="77,28,0,0" VerticalAlignment="Top" Width="148" FontFamily="Poppins ExtraLight" FontSize="14"
                    Foreground="Gray" Height="31" />
             <Image Grid.Column="1" HorizontalAlignment="Left" Height="53" VerticalAlignment="Top" Width="52"
-                   Margin="20,6,0,0" Source="Assets/account.png" IsHitTestVisible="False" Stretch="Fill" Cursor="None" />
+                   Margin="20,6,0,0" Source="Assets/BetterMC/account.png" IsHitTestVisible="False" Stretch="Fill" Cursor="None" />
             <Button x:Name="close_button" Content="X"  Style="{StaticResource ModernButton}"
                         Background="#FF252525" BorderBrush="#FF252525" Foreground="White" FontFamily="Poppins SemiBold" FontSize="36" VerticalAlignment="Top" Grid.Column="1" Margin="1015,5,10,0" Click="OnCloseClick" />
             <Button x:Name="minimize_button" Content="_"  Style="{StaticResource ModernButton}"

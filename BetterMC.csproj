@@ -149,10 +149,14 @@
     <Folder Include="Core\Settings\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\account.png" />
+    <Resource Include="Assets\BetterMC\account.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\github.png" />
+    <Resource Include="Assets\BetterMC\github.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ModLoaders\fabric.png" />
+    <Resource Include="Assets\ModLoaders\forge.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

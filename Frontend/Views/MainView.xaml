@@ -99,7 +99,7 @@
                     <StackPanel>
                         <TextBlock Text="Our GitHub" Foreground="White" FontSize="50" FontWeight="SemiBold" FontFamily="Poppins" Margin="-5,0,86,0" HorizontalAlignment="Center"/>
                         <TextBlock Foreground="White" FontSize="20" FontWeight="Light" Margin="15, 0, 0, 0" FontFamily="Poppins" Height="50" Text="Our GitHub repository."/>
-                        <Image Height="50" Width="50" Margin="330,15,0,0" Source="/BetterMC;component/Assets/github.png"/>
+                        <Image Height="50" Width="50" Margin="330,15,0,0" Source="/BetterMC;component/Assets/BetterMC/github.png"/>
                     </StackPanel>
                 </Grid>
             </Border>
