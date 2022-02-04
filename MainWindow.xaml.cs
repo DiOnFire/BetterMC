@@ -36,7 +36,7 @@ namespace BetterMC
          */ 
         private void OnLaunchButtonClick(object sender, System.Windows.RoutedEventArgs e)
         {
-            new DownPanelExecutor().SwitchViewModel();
+            new SwitchViewModelExecutor().SwitchViewModel();
         }
 
         /*

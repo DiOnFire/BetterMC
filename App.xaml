@@ -10,6 +10,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Theme/ScreenMenuButton.xaml"/>
                 <ResourceDictionary Source="Theme/ModernButton.xaml"/>
+                <ResourceDictionary Source="Theme/InstallationWidget.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <DataTemplate DataType="{x:Type viewModel:DashboardViewModel}">
                 <view:MainView/>

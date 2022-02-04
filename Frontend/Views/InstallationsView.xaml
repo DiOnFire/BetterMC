@@ -8,6 +8,7 @@
              d:DesignHeight="569" d:DesignWidth="1060" Background="#303030">
     <Grid>
         <Label x:Name="ver" Content="Label" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="549" Width="1040" FontFamily="Segoe UI Black" Foreground="White"/>
-
+        <Button x:Name="bloomware_left" Height="50" Foreground="White" FontSize="25" FontFamily="Poppins"
+                             FontWeight="Medium" VerticalAlignment="Center" Style="{StaticResource InstallationWidget}"/>
     </Grid>
 </UserControl>

@@ -11,12 +11,12 @@ namespace BetterMC.Frontend.Executor
      * Changes properties of button (like text or color)
      * Executes button's command
      */
-    sealed class DownPanelExecutor
+    sealed class SwitchViewModelExecutor
     {
         private readonly Dictionary<string, Color> themes = new Dictionary<string, Color>();
         private readonly SolidColorBrush EMPTY = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
 
-        public DownPanelExecutor()
+        public SwitchViewModelExecutor()
         {
             themes.Add("BloomwareViewModel", Color.FromRgb(164, 11, 191));
             themes.Add("AltsViewModel", Color.FromRgb(234, 195, 0));

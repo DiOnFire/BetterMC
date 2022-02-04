@@ -82,7 +82,7 @@
     <Compile Include="Core\Installations\Types\OtherInstallation.cs" />
     <Compile Include="Core\Installations\Types\VanillaInstallation.cs" />
     <Compile Include="Core\RelayCommand.cs" />
-    <Compile Include="Frontend\Executor\DownPanelExecutor.cs" />
+    <Compile Include="Frontend\Executor\SwitchViewModelExecutor.cs" />
     <Compile Include="Frontend\ViewModel\AltsViewModel.cs" />
     <Compile Include="Frontend\ViewModel\BloomwareViewModel.cs" />
     <Compile Include="Frontend\ViewModel\InstallationsViewModel.cs" />
@@ -105,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Frontend\Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\InstallationWidget.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
