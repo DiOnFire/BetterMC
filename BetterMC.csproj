@@ -170,5 +170,8 @@
     <Resource Include="Assets\ModLoaders\fabric.png" />
     <Resource Include="Assets\ModLoaders\forge.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ModLoaders\basic.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

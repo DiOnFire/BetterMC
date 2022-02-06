@@ -1,18 +1,8 @@
 ﻿using BetterMC.Core.Installations;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace BetterMC.Theme.Installations
 {
@@ -34,6 +24,18 @@ namespace BetterMC.Theme.Installations
         {
             installation_name.Text = _installation.name;
             installation_version.Text = _installation.type.ToString();
+            switch (_installation.type)
+            {
+                case InstallationType.FABRIC:
+                    mod_loader_picture.Source = new BitmapImage(new Uri("/BetterMC;component/Assets/ModLoaders/fabric.png"));
+                    break;
+                case InstallationType.FORGE:
+                    mod_loader_picture.Source = new BitmapImage(new Uri("/BetterMC;component/Assets/ModLoaders/forge.png"));
+                    break;
+                default:
+                    mod_loader_picture.Source = new BitmapImage(new Uri("/BetterMC;component/Assets/ModLoaders/basic.png"));
+                    break;
+            }
         }
     }
 }
