@@ -23,8 +23,12 @@ namespace BetterMC.Frontend.Views
             string mc = loader.FindMinecraft();
             string[] versions = loader.GetVersionPaths(ref mc);
             List<Installation> version = loader.LoadInstallations(versions);
-            int index = installations_panel.Children.Count - 1;
-            installations_panel.Children.Insert(index, new InstallationControl());
+            for (int i = 0; i < version.Count; i++)
+            {
+                int index = installations_panel.Children.Count - 1;
+                installations_panel.Children.Insert(index, new InstallationControl());
+            }
+         
         }
     }
 }
