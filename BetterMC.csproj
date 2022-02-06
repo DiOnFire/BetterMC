@@ -54,6 +54,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
     <Compile Include="Theme\Installations\InstallationControl.xaml.cs">
       <DependentUpon>InstallationControl.xaml</DependentUpon>
     </Compile>
