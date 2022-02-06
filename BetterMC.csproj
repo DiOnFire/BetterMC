@@ -55,6 +55,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
+    <Compile Include="Frontend\Util\GlobalColors.cs" />
     <Compile Include="Theme\Installations\InstallationControl.xaml.cs">
       <DependentUpon>InstallationControl.xaml</DependentUpon>
     </Compile>
@@ -159,7 +160,6 @@
   <ItemGroup>
     <Folder Include="Core\Accounts\" />
     <Folder Include="Core\Settings\" />
-    <Folder Include="Frontend\UserControls\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\BetterMC\account.png" />

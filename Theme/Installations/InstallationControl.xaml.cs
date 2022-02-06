@@ -1,7 +1,9 @@
 ﻿using BetterMC.Core.Installations;
 using BetterMC.Core.Installations.Types;
+using BetterMC.Frontend.Util;
 using System;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace BetterMC.Theme.Installations
@@ -38,6 +40,16 @@ namespace BetterMC.Theme.Installations
                     mod_loader_picture.Source = new BitmapImage(new Uri("pack://application:,,,/BetterMC;component/Assets/ModLoaders/basic.png"));
                     break;
             }
+        }
+
+        private void main_grid_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            main_grid.Background = GlobalColors.GRAY;
+        }
+
+        private void main_grid_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            main_grid.Background = GlobalColors.EMPTY;
         }
     }
 }

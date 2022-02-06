@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:BetterMC.Theme.Installations"
              mc:Ignorable="d" 
              d:DesignHeight="60" d:DesignWidth="1050">
-    <Grid >
+    <Grid x:Name="main_grid" MouseEnter="main_grid_MouseEnter" MouseLeave="main_grid_MouseLeave" >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="12*"/>
             <ColumnDefinition Width="129*"/>
@@ -20,4 +20,5 @@
         <TextBlock x:Name="installation_name" Text="Name" Foreground="White" FontFamily="Poppins" Margin="0,5,10,30" HorizontalAlignment="Right" Width="750" Grid.Column="1" FontSize="18" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="installation_version" Text="Version" Foreground="Gray" FontFamily="Poppins" Margin="0,30,10,5" HorizontalAlignment="Right" Width="750" Grid.Column="1" FontSize="12" Grid.ColumnSpan="2"/>
     </Grid>
+    
 </UserControl>
