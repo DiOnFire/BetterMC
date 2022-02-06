@@ -20,6 +20,11 @@ namespace BetterMC.Core.Installations
             return File.Exists(path);
         }
 
+        public void Launch()
+        {
+
+        }
+
         public void Delete()
         {
 

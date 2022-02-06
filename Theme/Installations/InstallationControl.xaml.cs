@@ -1,7 +1,7 @@
 ﻿using BetterMC.Core.Installations;
+using BetterMC.Core.Installations.Types;
 using System;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace BetterMC.Theme.Installations
@@ -27,13 +27,15 @@ namespace BetterMC.Theme.Installations
             switch (_installation.type)
             {
                 case InstallationType.FABRIC:
-                    mod_loader_picture.Source = new BitmapImage(new Uri("/BetterMC;component/Assets/ModLoaders/fabric.png"));
+                    mod_loader_picture.Source = new BitmapImage(new Uri("pack://application:,,,/BetterMC;component/Assets/ModLoaders/fabric.png"));
+                    installation_version.Text += $" ({((FabricInstallation)_installation).fabricVersion})";
                     break;
                 case InstallationType.FORGE:
-                    mod_loader_picture.Source = new BitmapImage(new Uri("/BetterMC;component/Assets/ModLoaders/forge.png"));
+                    mod_loader_picture.Source = new BitmapImage(new Uri("pack://application:,,,/BetterMC;component/Assets/ModLoaders/forge.png"));
+                    installation_version.Text += $" ({((ForgeInstallation)_installation).forgeVersion})";
                     break;
                 default:
-                    mod_loader_picture.Source = new BitmapImage(new Uri("/BetterMC;component/Assets/ModLoaders/basic.png"));
+                    mod_loader_picture.Source = new BitmapImage(new Uri("pack://application:,,,/BetterMC;component/Assets/ModLoaders/basic.png"));
                     break;
             }
         }
