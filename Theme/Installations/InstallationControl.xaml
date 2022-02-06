@@ -7,12 +7,17 @@
              mc:Ignorable="d" 
              d:DesignHeight="60" d:DesignWidth="1050">
     <Grid >
-        <StackPanel>
-            <TextBlock Text="Name" Foreground="White" FontFamily="Poppins"/>
-            <TextBlock Text="Loader / Version" Foreground="Gray"/>
-            <Image Source="/BetterMC;component/Assets/ModLoaders/fabric.png" Height="40" Width="40" Margin="-1000, 3, 0, 0"/>
-            <Button Style="{StaticResource ModernButton}" Background="#34d100" Foreground="White" FontFamily="Poppins SemiBold" Content="LAUNCH" Width="120" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="500, -104, 0, 0"/>
-            <Button Style="{StaticResource ModernButton}" Background="#252525" Foreground="White" FontFamily="Poppins SemiBold" Content="..." Width="60" Height="30" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Margin="800, -104, 0, 0"/>
-        </StackPanel>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="129*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="31*"/>
+            <ColumnDefinition Width="13*"/>
+        </Grid.ColumnDefinitions>
+        <Image Source="/BetterMC;component/Assets/ModLoaders/fabric.png" Height="60" HorizontalAlignment="Right" Width="60"/>
+        <Button Style="{StaticResource ModernButton}" Background="#252525" Foreground="White" FontFamily="Poppins SemiBold" Content="..." Width="45" Height="40" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Margin="10" Grid.Column="4"/>
+        <Button Style="{StaticResource ModernButton}" Background="#34d100" Foreground="White" FontFamily="Poppins SemiBold" Content="LAUNCH" Width="130" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="15,10,10,10" RenderTransformOrigin="0.5,-0.267" Grid.Column="3"/>
+        <TextBlock x:Name="installation_name" Text="Name" Foreground="White" FontFamily="Poppins" Margin="0,5,10,30" HorizontalAlignment="Right" Width="750" Grid.Column="1" FontSize="18" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="installation_version" Text="Version" Foreground="Gray" FontFamily="Poppins" Margin="0,30,10,5" HorizontalAlignment="Right" Width="750" Grid.Column="1" FontSize="12" Grid.ColumnSpan="2"/>
     </Grid>
 </UserControl>

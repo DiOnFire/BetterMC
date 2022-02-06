@@ -10,7 +10,6 @@
     <Grid>
         <ScrollViewer VerticalScrollBarVisibility="Hidden">
             <StackPanel x:Name="installations_panel">
-                <uc:InstallationControl/>
             </StackPanel>
         </ScrollViewer>
     </Grid>

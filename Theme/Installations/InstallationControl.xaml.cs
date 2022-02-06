@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BetterMC.Core.Installations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,19 @@ namespace BetterMC.Theme.Installations
     /// </summary>
     public partial class InstallationControl : UserControl
     {
-        public InstallationControl()
+        private Installation _installation;
+
+        public InstallationControl(Installation installation)
         {
             InitializeComponent();
+            this._installation = installation;
+            InitComponent();
+        }
+
+        private void InitComponent()
+        {
+            installation_name.Text = _installation.name;
+            installation_version.Text = _installation.type.ToString();
         }
     }
 }

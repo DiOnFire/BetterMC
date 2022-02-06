@@ -2,7 +2,7 @@
 
 namespace BetterMC.Core.Installations
 {
-    abstract class Installation
+    public abstract class Installation
     {
         public string name { get; set; }
         public string path { get; set; }

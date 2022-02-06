@@ -14,10 +14,10 @@ namespace BetterMC.Frontend.Views
         public InstallationsView()
         {
             InitializeComponent();
-            InitVersions();
+            InitChildren();
         }
 
-        private void InitVersions()
+        private void InitChildren()
         {
             InstallationsLoader loader = new InstallationsLoader();
             string mc = loader.FindMinecraft();
@@ -25,10 +25,9 @@ namespace BetterMC.Frontend.Views
             List<Installation> version = loader.LoadInstallations(versions);
             for (int i = 0; i < version.Count; i++)
             {
-                int index = installations_panel.Children.Count - 1;
-                installations_panel.Children.Insert(index, new InstallationControl());
+                int index = installations_panel.Children.Count;
+                installations_panel.Children.Insert(index, new InstallationControl(version[i]));
             }
-         
         }
     }
 }
