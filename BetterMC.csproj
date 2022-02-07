@@ -54,8 +54,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Core\ElementHorizontalAlignment.cs" />
     <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
     <Compile Include="Frontend\Util\GlobalColors.cs" />
+    <Compile Include="Frontend\ViewModel\Popups\PopupViewModel.cs" />
     <Compile Include="Theme\Installations\InstallationControl.xaml.cs">
       <DependentUpon>InstallationControl.xaml</DependentUpon>
     </Compile>
@@ -88,10 +90,10 @@
     <Compile Include="Core\Installations\Types\VanillaInstallation.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Frontend\Executor\SwitchViewModelExecutor.cs" />
-    <Compile Include="Frontend\ViewModel\AltsViewModel.cs" />
-    <Compile Include="Frontend\ViewModel\BloomwareViewModel.cs" />
-    <Compile Include="Frontend\ViewModel\InstallationsViewModel.cs" />
-    <Compile Include="Frontend\ViewModel\SettingsViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\Screens\AltsViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\Screens\BloomwareViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\Screens\InstallationsViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\Screens\SettingsViewModel.cs" />
     <Compile Include="Frontend\Views\AltsView.xaml.cs">
       <DependentUpon>AltsView.xaml</DependentUpon>
     </Compile>
@@ -117,10 +119,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Theme\Installations\InstallationWidget.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Theme\Basic\ModernButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -131,8 +129,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frontend\ViewModel\DashboardViewModel.cs" />
-    <Compile Include="Frontend\ViewModel\MainViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\Screens\DashboardViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\Screens\MainViewModel.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Frontend\Views\BloomwareView.xaml.cs">
       <DependentUpon>BloomwareView.xaml</DependentUpon>
@@ -160,6 +158,7 @@
   <ItemGroup>
     <Folder Include="Core\Accounts\" />
     <Folder Include="Core\Settings\" />
+    <Folder Include="Theme\Installations\Popup\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\BetterMC\account.png" />
