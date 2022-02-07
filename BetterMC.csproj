@@ -54,12 +54,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Core\ElementHorizontalAlignment.cs" />
     <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
     <Compile Include="Frontend\Util\GlobalColors.cs" />
-    <Compile Include="Frontend\ViewModel\Popups\PopupViewModel.cs" />
+    <Compile Include="Theme\Basic\Popup.xaml.cs">
+      <DependentUpon>Popup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Theme\Installations\InstallationControl.xaml.cs">
       <DependentUpon>InstallationControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Theme\Installations\Popup\InstallationOptionsPopup.xaml.cs">
+      <DependentUpon>InstallationOptionsPopup.xaml</DependentUpon>
     </Compile>
     <Page Include="Frontend\Views\AltsView.xaml">
       <SubType>Designer</SubType>
@@ -115,6 +119,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Theme\Basic\Popup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Theme\Installations\InstallationControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -124,6 +132,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Theme\Basic\ScreenMenuButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Installations\Popup\InstallationOptionsPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,7 +170,6 @@
   <ItemGroup>
     <Folder Include="Core\Accounts\" />
     <Folder Include="Core\Settings\" />
-    <Folder Include="Theme\Installations\Popup\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\BetterMC\account.png" />

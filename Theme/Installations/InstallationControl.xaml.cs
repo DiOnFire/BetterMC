@@ -1,9 +1,9 @@
 ﻿using BetterMC.Core.Installations;
 using BetterMC.Core.Installations.Types;
 using BetterMC.Frontend.Util;
+using BetterMC.Theme.Installations.Popup;
 using System;
 using System.Windows.Controls;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
 namespace BetterMC.Theme.Installations
@@ -14,6 +14,7 @@ namespace BetterMC.Theme.Installations
     public partial class InstallationControl : UserControl
     {
         private Installation _installation;
+        private InstallationOptionsPopup popup = new InstallationOptionsPopup();
 
         public InstallationControl(Installation installation)
         {
@@ -50,6 +51,11 @@ namespace BetterMC.Theme.Installations
         private void main_grid_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {
             main_grid.Background = GlobalColors.EMPTY;
+        }
+
+        private void additional_options_button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            popup.options_popup.IsOpen = true;
         }
     }
 }
