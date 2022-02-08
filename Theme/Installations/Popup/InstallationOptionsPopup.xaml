@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:BetterMC.Theme.Installations.Popup" Height="200" Width="448" MouseLeave="main_control_MouseLeave">
-    <Popup x:Name="options_popup"  Placement="Mouse" Visibility="Visible" Width="225" Height="100" Margin="0, 100, -225, 0" StaysOpen="False">
+             xmlns:local="clr-namespace:BetterMC.Theme.Installations.Popup" Height="210" Width="448">
+    <Popup x:Name="options_popup"  Placement="Mouse" Visibility="Visible" Margin="159,75,-1,-30" StaysOpen="False">
         <StackPanel>
-            <Button Style="{StaticResource ModernButton}" Background="#252525" Foreground="White" FontFamily="Poppins SemiBold" Content="SETTINGS" Width="225" Height="35" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center"/>
-            <Button Style="{StaticResource ModernButton}" Background="#efb300" Foreground="White" FontFamily="Poppins SemiBold" Content="OPEN IN EXPLORER" Width="225" Height="30" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
-            <Button Style="{StaticResource ModernButton}" Background="#ef3737" Foreground="White" FontFamily="Poppins SemiBold" Content="DELETE" Width="225" Height="30" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center"/>
+            <Button x:Name="installation_settings" Style="{StaticResource ModernButton}" Background="#303030" Foreground="White" FontFamily="Poppins SemiBold" Content="SETTINGS" Width="225" Height="37" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" MouseEnter="installation_settings_MouseEnter" MouseLeave="installation_settings_MouseLeave"/>
+            <Button x:Name="open_installation_path" Style="{StaticResource ModernButton}" Background="#303030" Foreground="White" FontFamily="Poppins SemiBold" Content="OPEN IN EXPLORER" Width="225" Height="37" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" MouseEnter="open_installation_path_MouseEnter" MouseLeave="open_installation_path_MouseLeave" Click="open_installation_path_Click"/>
+            <Button x:Name="delete_installation" Style="{StaticResource ModernButton}" Background="#303030" Foreground="White" FontFamily="Poppins SemiBold" Content="DELETE" Width="225" Height="37" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" MouseEnter="delete_installation_MouseEnter" MouseLeave="delete_installation_MouseLeave"/>
         </StackPanel>
     </Popup>
 </UserControl>

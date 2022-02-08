@@ -13,29 +13,30 @@ namespace BetterMC.Theme.Installations
     /// </summary>
     public partial class InstallationControl : UserControl
     {
-        private Installation _installation;
-        private InstallationOptionsPopup popup = new InstallationOptionsPopup();
+        private Installation installation;
+        private InstallationOptionsPopup popup;
 
         public InstallationControl(Installation installation)
         {
             InitializeComponent();
-            this._installation = installation;
+            this.installation = installation;
             InitComponent();
+            popup = new InstallationOptionsPopup(this.installation);
         }
 
         private void InitComponent()
         {
-            installation_name.Text = _installation.name;
-            installation_version.Text = _installation.type.ToString();
-            switch (_installation.type)
+            installation_name.Text = installation.name;
+            installation_version.Text = installation.type.ToString();
+            switch (installation.type)
             {
                 case InstallationType.FABRIC:
                     mod_loader_picture.Source = new BitmapImage(new Uri("pack://application:,,,/BetterMC;component/Assets/ModLoaders/fabric.png"));
-                    installation_version.Text += $" ({((FabricInstallation)_installation).fabricVersion})";
+                    installation_version.Text += $" ({((FabricInstallation)installation).fabricVersion})";
                     break;
                 case InstallationType.FORGE:
                     mod_loader_picture.Source = new BitmapImage(new Uri("pack://application:,,,/BetterMC;component/Assets/ModLoaders/forge.png"));
-                    installation_version.Text += $" ({((ForgeInstallation)_installation).forgeVersion})";
+                    installation_version.Text += $" ({((ForgeInstallation)installation).forgeVersion})";
                     break;
                 default:
                     mod_loader_picture.Source = new BitmapImage(new Uri("pack://application:,,,/BetterMC;component/Assets/ModLoaders/basic.png"));
