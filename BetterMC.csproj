@@ -54,6 +54,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Core\Accounts\Account.cs" />
+    <Compile Include="Core\Accounts\AccountType.cs" />
     <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
     <Compile Include="Frontend\Util\GlobalColors.cs" />
     <Compile Include="Theme\Basic\Popup.xaml.cs">
@@ -168,7 +170,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\Accounts\" />
     <Folder Include="Core\Settings\" />
   </ItemGroup>
   <ItemGroup>
