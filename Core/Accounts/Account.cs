@@ -1,6 +1,6 @@
 ﻿namespace BetterMC.Core.Accounts
 {
-    abstract class Account
+    public struct Account
     {
         public string login { get; set; }
         public string password { get; set; }

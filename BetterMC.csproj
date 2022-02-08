@@ -56,6 +56,9 @@
     </ApplicationDefinition>
     <Compile Include="Core\Accounts\Account.cs" />
     <Compile Include="Core\Accounts\AccountType.cs" />
+    <Compile Include="Core\Accounts\Management\AccountManager.cs" />
+    <Compile Include="Core\Files\AccountLoader.cs" />
+    <Compile Include="Core\Files\ConfigLoader.cs" />
     <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
     <Compile Include="Frontend\Util\GlobalColors.cs" />
     <Compile Include="Theme\Basic\Popup.xaml.cs">
