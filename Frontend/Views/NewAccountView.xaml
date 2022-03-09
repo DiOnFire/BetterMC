@@ -9,7 +9,8 @@
     <Grid>
         <StackPanel>
             <TextBlock Text="Add new account" HorizontalAlignment="Center" Margin="0, 20, 0, 0" FontFamily="Poppins" Foreground="White" FontSize="50" FontWeight="Bold"/>
-            <TextBox Style="{StaticResource ModernTextField}" Height="60" Margin="25,0"/>
+            <TextBox x:Name="login_box" Style="{StaticResource ModernTextField}" Height="55" Margin="25,0" FontFamily="Poppins Light" ToolTip="EMAIL / NICKNAME"/>
+            <TextBox x:Name="password_box" Style="{StaticResource ModernTextField}" Height="55" Margin="25,0"  ToolTip="PASSWORD" FontFamily="Poppins Light"/>
         </StackPanel>
     </Grid>
 </UserControl>
