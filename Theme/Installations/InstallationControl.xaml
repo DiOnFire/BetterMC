@@ -15,8 +15,8 @@
             <ColumnDefinition Width="13*"/>
         </Grid.ColumnDefinitions>
         <Image x:Name="mod_loader_picture" Source="/BetterMC;component/Assets/ModLoaders/fabric.png" HorizontalAlignment="Right" Width="50" Margin="0,5,5,5"/>
-        <Button x:Name="additional_options_button" Style="{StaticResource ModernButton}" Background="#252525" Foreground="White" FontFamily="Poppins SemiBold" Content="..." Width="45" Height="40" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Margin="10" Grid.Column="4" Click="additional_options_button_Click"/>
-        <Button Style="{StaticResource ModernButton}" Background="#34d100" Foreground="White" FontFamily="Poppins SemiBold" Content="LAUNCH" Width="130" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="15,10,10,10" RenderTransformOrigin="0.5,-0.267" Grid.Column="3"/>
+        <Button x:Name="additional_options_button" Style="{StaticResource ModernButton}" Background="#252525" Foreground="White" FontFamily="Poppins SemiBold" Content="..." Width="45" Height="40" HorizontalAlignment="Center" FontSize="20" VerticalAlignment="Center" Margin="10" Grid.Column="4" Click="additional_options_button_Click" Visibility="Hidden"/>
+        <Button x:Name="launch_button" Style="{StaticResource ModernButton}" Background="#34d100" Foreground="White" FontFamily="Poppins SemiBold" Content="LAUNCH" Width="130" Height="40" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Margin="15,10,10,10" RenderTransformOrigin="0.5,-0.267" Grid.Column="3" Visibility="Hidden"/>
         <TextBlock x:Name="installation_name" Text="Name" Foreground="White" FontFamily="Poppins" Margin="0,5,10,30" HorizontalAlignment="Right" Width="750" Grid.Column="1" FontSize="18" Grid.ColumnSpan="2"/>
         <TextBlock x:Name="installation_version" Text="Version" Foreground="Gray" FontFamily="Poppins" Margin="0,30,10,5" HorizontalAlignment="Right" Width="750" Grid.Column="1" FontSize="12" Grid.ColumnSpan="2"/>
     </Grid>

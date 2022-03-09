@@ -61,6 +61,10 @@
     <Compile Include="Core\Files\ConfigLoader.cs" />
     <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
     <Compile Include="Frontend\Util\GlobalColors.cs" />
+    <Compile Include="Frontend\ViewModel\Screens\NewAccountViewModel.cs" />
+    <Compile Include="Frontend\Views\NewAccountView.xaml.cs">
+      <DependentUpon>NewAccountView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Theme\Basic\Popup.xaml.cs">
       <DependentUpon>Popup.xaml</DependentUpon>
     </Compile>
@@ -75,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Frontend\Views\InstallationsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Frontend\Views\NewAccountView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,6 +129,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Frontend\Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Basic\ModernTextField.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

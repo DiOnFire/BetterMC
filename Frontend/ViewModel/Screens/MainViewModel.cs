@@ -11,6 +11,7 @@ namespace BetterMC.Frontend.ViewModel
         public RelayCommand AltsViewCommand { get; set; }
         public RelayCommand InstallationsViewCommand { get; set; }
         public RelayCommand SettingsViewCommand { get; set; }
+        public RelayCommand NewAccountCommand { get; set; }
 
         public DashboardViewModel DashboardView { get; set; }
         public BloomwareViewModel BloomwareView { get; set; }

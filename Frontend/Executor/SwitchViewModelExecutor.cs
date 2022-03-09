@@ -25,9 +25,11 @@ namespace BetterMC.Frontend.Executor
             themes.Add("InstallationsViewModel", Color.FromRgb(52, 209, 0));
         }
 
-        /*
-         * Executes button's command
-         */
+        public void NewAltButtonClick()
+        {
+
+        }
+
         public void Execute()
         {
         }
@@ -75,9 +77,6 @@ namespace BetterMC.Frontend.Executor
             }
         }
 
-        /*
-         * Private method for resetting the colors when you are switching view model
-         */ 
         private void ResetConfig(ref MainWindow window, ref string model)
         {
             window.new_alt.Visibility = Visibility.Hidden;

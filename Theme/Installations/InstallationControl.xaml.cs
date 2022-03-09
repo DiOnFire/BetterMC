@@ -5,6 +5,9 @@ using BetterMC.Theme.Installations.Popup;
 using System;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using System.Windows.Input;
+
+using static System.Windows.Visibility;
 
 namespace BetterMC.Theme.Installations
 {
@@ -44,19 +47,27 @@ namespace BetterMC.Theme.Installations
             }
         }
 
-        private void main_grid_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        private void MakeVisible(bool visible)
         {
-            main_grid.Background = GlobalColors.GRAY;
+            main_grid.Background = visible ? GlobalColors.GRAY : GlobalColors.EMPTY;
+            launch_button.Visibility = visible ? Visible : Hidden;
+            additional_options_button.Visibility = visible ? Visible : Hidden;
         }
 
-        private void main_grid_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        private void main_grid_MouseEnter(object sender, MouseEventArgs e)
         {
-            main_grid.Background = GlobalColors.EMPTY;
+            MakeVisible(true);
+        }
+
+        private void main_grid_MouseLeave(object sender, MouseEventArgs e)
+        {
+            MakeVisible(false);
         }
 
         private void additional_options_button_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             popup.options_popup.IsOpen = true;
+            MakeVisible(true);
         }
     }
 }
