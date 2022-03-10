@@ -24,5 +24,10 @@ namespace BetterMC.Frontend.Views
         {
             InitializeComponent();
         }
+
+        private void mojang_button1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

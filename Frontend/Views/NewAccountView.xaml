@@ -8,9 +8,31 @@
              d:DesignHeight="569" d:DesignWidth="1060" Background="#303030">
     <Grid>
         <StackPanel>
-            <TextBlock Text="Add new account" HorizontalAlignment="Center" Margin="0, 20, 0, 0" FontFamily="Poppins" Foreground="White" FontSize="50" FontWeight="Bold"/>
-            <TextBox x:Name="login_box" Style="{StaticResource ModernTextField}" Height="55" Margin="25,0" FontFamily="Poppins Light" ToolTip="EMAIL / NICKNAME"/>
-            <TextBox x:Name="password_box" Style="{StaticResource ModernTextField}" Height="55" Margin="25,0"  ToolTip="PASSWORD" FontFamily="Poppins Light"/>
+            <TextBlock Text="Add new account" HorizontalAlignment="Center" Margin="306,20,306,0" FontFamily="Poppins" Foreground="White" FontSize="50" FontWeight="Bold" Height="95"/>
+            <StackPanel Height="90" RenderTransformOrigin="0.5,0.5">
+                <StackPanel.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0.128"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0.385"/>
+                    </TransformGroup>
+                </StackPanel.RenderTransform>
+                <TextBox x:Name="login_box" Style="{StaticResource ModernTextField}" Height="55" Margin="75,0" FontFamily="Poppins Light" ToolTip="EMAIL / NICKNAME"/>
+            </StackPanel>
+            <StackPanel Height="105">
+                <TextBox x:Name="password_box" Style="{StaticResource ModernTextField}" Height="55" Margin="75,0"  ToolTip="PASSWORD" FontFamily="Poppins Light" RenderTransformOrigin="0.495,3.182"/>
+            </StackPanel>
+            <StackPanel Height="75" RenderTransformOrigin="0.524,0.533">
+                <Button x:Name="mojang_button" Content="LOGIN USING MOJANG" Height="65" Margin="170,0" Style="{StaticResource ModernButton}" FontFamily="Poppins" Foreground="White" FontWeight="SemiBold" FontSize="30"/>
+            </StackPanel>
+            <StackPanel Height="75" RenderTransformOrigin="0.524,0.533">
+                <Button x:Name="offline_button" Content="LOGIN OFFLINE" Height="65" Margin="170,0" Style="{StaticResource ResourceKey=ModernButton}" FontFamily="Poppins" Foreground="White" FontWeight="SemiBold" FontSize="30" Click="mojang_button1_Click"/>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel RenderTransformOrigin="0.524,0.533" Margin="0,460,0,34">
+            <Button x:Name="microsoft_button" Content="MICROSOFT" Height="65" Margin="170,0,505,0" Style="{StaticResource ResourceKey=ModernButton}" FontFamily="Poppins" Foreground="White" FontWeight="SemiBold" FontSize="30" Click="mojang_button1_Click"/>
+            <Button x:Name="microsoft_button_Copy" Content="MICROSOFT" Height="65" Margin="170,0,505,0" Style="{StaticResource ResourceKey=ModernButton}" FontFamily="Poppins" Foreground="White" FontWeight="SemiBold" FontSize="30" Click="mojang_button1_Click"/>
         </StackPanel>
     </Grid>
 </UserControl>
