@@ -14,21 +14,12 @@ namespace BetterMC.Frontend.ViewModel
             InitVersions();
         }
 
-        private void InitGrid()
-        {
-            for (int i = 0; i < versions.Count; i++)
-            {
-                
-            }
-        }
-
         private void InitVersions()
         {
             InstallationsLoader loader = new InstallationsLoader();
             string mc = loader.FindMinecraft();
             string[] version = loader.GetVersionPaths(ref mc);
             versions.AddRange(loader.LoadInstallations(version));
-           
         }
     }
 }

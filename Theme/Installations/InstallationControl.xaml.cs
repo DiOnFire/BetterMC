@@ -1,5 +1,4 @@
 ﻿using BetterMC.Core.Installations;
-using BetterMC.Core.Installations.Types;
 using BetterMC.Frontend.Util;
 using BetterMC.Theme.Installations.Popup;
 using System;
@@ -29,17 +28,17 @@ namespace BetterMC.Theme.Installations
 
         private void InitComponent()
         {
-            installation_name.Text = installation.name;
-            installation_version.Text = installation.type.ToString();
-            switch (installation.type)
+            installation_name.Text = installation.Name;
+            installation_version.Text = installation.Type.ToString();
+            switch (installation.Type)
             {
                 case InstallationType.FABRIC:
                     mod_loader_picture.Source = new BitmapImage(new Uri("pack://application:,,,/BetterMC;component/Assets/ModLoaders/fabric.png"));
-                    installation_version.Text += $" ({((FabricInstallation)installation).fabricVersion})";
+                    installation_version.Text += $" ({installation.LoaderVersion})";
                     break;
                 case InstallationType.FORGE:
                     mod_loader_picture.Source = new BitmapImage(new Uri("pack://application:,,,/BetterMC;component/Assets/ModLoaders/forge.png"));
-                    installation_version.Text += $" ({((ForgeInstallation)installation).forgeVersion})";
+                    installation_version.Text += $" ({installation.LoaderVersion})";
                     break;
                 default:
                     mod_loader_picture.Source = new BitmapImage(new Uri("pack://application:,,,/BetterMC;component/Assets/ModLoaders/basic.png"));

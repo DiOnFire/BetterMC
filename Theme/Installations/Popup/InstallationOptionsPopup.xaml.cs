@@ -51,7 +51,7 @@ namespace BetterMC.Theme.Installations.Popup
 
         private void open_installation_path_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            Process.Start("explorer.exe", "/select, \"" + installation.path + "\"");
+            Process.Start("explorer.exe", "/select, \"" + installation.Path + "\"");
         }
     }
 }

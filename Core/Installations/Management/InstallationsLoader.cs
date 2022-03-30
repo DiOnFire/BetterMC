@@ -1,5 +1,4 @@
-﻿using BetterMC.Core.Installations.Types;
-using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +25,17 @@ namespace BetterMC.Core.Installations.Management
             {
                 foreach (string file in Directory.GetFiles(path))
                 {
-                    if (file.Contains(".json") && IsValidInstallation(path)) installations.Add(CreateFromJson(file));
+                    if (file.Contains(".json") && IsValidInstallation(path))
+                    {
+                        try
+                        {
+                            installations.Add(CreateFromJson(file));
+                        }
+                        catch (FileNotFoundException)
+                        {
+                            continue;
+                        } 
+                    }
                 }
             }
             return installations;
@@ -46,18 +55,17 @@ namespace BetterMC.Core.Installations.Management
         public Installation CreateFromJson(string path)
         {
             JObject json = JObject.Parse(File.ReadAllText(path));
-            if (!json.ContainsKey("id")) return new VanillaInstallation("no_data", path, "no_version");
+            if (!json.ContainsKey("id")) return new Installation("no_data", InstallationType.VANILLA, path);
             string name = json.GetValue("id").ToString();
             InstallationType type = name.Contains("forge") ? InstallationType.FORGE : name.Contains("fabric") ? InstallationType.FABRIC : InstallationType.OTHER;
             string modLoaderVersion = type == InstallationType.FORGE || type == InstallationType.FABRIC ? GetModLoaderVersion(name) : null;
             switch (type)
             {
                 case InstallationType.FORGE:
-                    return new ForgeInstallation(name, path, modLoaderVersion);
                 case InstallationType.FABRIC:
-                    return new FabricInstallation(name, path, modLoaderVersion);
+                    return new Installation(name, type, modLoaderVersion, path);
                 default:
-                    return new OtherInstallation(name, path);
+                    return new Installation(name, InstallationType.OTHER, path);
             }
         }
 

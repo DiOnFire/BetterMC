@@ -57,6 +57,8 @@
     <Compile Include="Core\Accounts\Account.cs" />
     <Compile Include="Core\Accounts\AccountType.cs" />
     <Compile Include="Core\Accounts\Management\AccountManager.cs" />
+    <Compile Include="Core\Exception\InvalidInstallationTypeException.cs" />
+    <Compile Include="Core\Exception\InvalidNameException.cs" />
     <Compile Include="Core\Files\AccountLoader.cs" />
     <Compile Include="Core\Files\ConfigLoader.cs" />
     <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
@@ -101,10 +103,6 @@
     <Compile Include="Core\Installations\Installation.cs" />
     <Compile Include="Core\Installations\InstallationType.cs" />
     <Compile Include="Core\Installations\Management\InstallationsLoader.cs" />
-    <Compile Include="Core\Installations\Types\FabricInstallation.cs" />
-    <Compile Include="Core\Installations\Types\ForgeInstallation.cs" />
-    <Compile Include="Core\Installations\Types\OtherInstallation.cs" />
-    <Compile Include="Core\Installations\Types\VanillaInstallation.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Frontend\Executor\SwitchViewModelExecutor.cs" />
     <Compile Include="Frontend\ViewModel\Screens\AltsViewModel.cs" />
