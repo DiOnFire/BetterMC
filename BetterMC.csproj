@@ -57,8 +57,9 @@
     <Compile Include="Core\Accounts\Account.cs" />
     <Compile Include="Core\Accounts\AccountType.cs" />
     <Compile Include="Core\Accounts\Management\AccountManager.cs" />
-    <Compile Include="Core\Exception\InvalidInstallationTypeException.cs" />
-    <Compile Include="Core\Exception\InvalidNameException.cs" />
+    <Compile Include="Core\Exception\Account\InvalidCredentialsException.cs" />
+    <Compile Include="Core\Exception\Installation\InvalidInstallationTypeException.cs" />
+    <Compile Include="Core\Exception\Installation\InvalidNameException.cs" />
     <Compile Include="Core\Files\AccountLoader.cs" />
     <Compile Include="Core\Files\ConfigLoader.cs" />
     <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
