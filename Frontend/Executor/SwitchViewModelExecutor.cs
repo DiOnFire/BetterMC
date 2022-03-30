@@ -8,34 +8,32 @@ using static System.Windows.Application;
 namespace BetterMC.Frontend.Executor
 {
     /*
-     * Executor of Main button
-     * Changes properties of button (like text or color)
-     * Executes button's command
+     * View model switcher
+     * Changes properties of current view model
+     * Executes when view model changes via relay command
      */
-    sealed class SwitchViewModelExecutor
+    public static class SwitchViewModelExecutor
     {
-        private readonly Dictionary<string, Color> themes = new Dictionary<string, Color>();
-        private readonly SolidColorBrush EMPTY = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
-
-        public SwitchViewModelExecutor()
+        private static readonly Dictionary<string, Color> themes = new Dictionary<string, Color>()
         {
-            themes.Add("BloomwareViewModel", Color.FromRgb(164, 11, 191));
-            themes.Add("AltsViewModel", Color.FromRgb(234, 195, 0));
-            themes.Add("SettingsViewModel", Color.FromRgb(158, 158, 158));
-            themes.Add("DashboardViewModel", Color.FromRgb(52, 209, 0));
-            themes.Add("InstallationsViewModel", Color.FromRgb(52, 209, 0));
-            themes.Add("NewAccountViewModel", Color.FromRgb(234, 195, 0));
-        }
+            { "BloomwareViewModel", Color.FromRgb(164, 11, 191) },
+            { "AltsViewModel", Color.FromRgb(234, 195, 0) },
+            { "SettingsViewModel", Color.FromRgb(158, 158, 158) },
+            { "DashboardViewModel", Color.FromRgb(52, 209, 0) },
+            { "InstallationsViewModel", Color.FromRgb(52, 209, 0) },
+            { "NewAccountViewModel", Color.FromRgb(234, 195, 0) }
+        };
+        private static readonly SolidColorBrush EMPTY = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
 
-        public void NewAltButtonClick()
+        public static void NewAltButtonClick()
         {
         }
 
-        public void Execute()
+        public static void Execute()
         {
         }
 
-        public void SwitchViewModel()
+        public static void SwitchViewModel()
         {
             MainWindow window = Current.MainWindow as MainWindow;
             string model = (window?.DataContext as MainViewModel)?.CurrentView.GetType().Name;
@@ -83,7 +81,7 @@ namespace BetterMC.Frontend.Executor
             }
         }
 
-        private void ResetConfig(ref MainWindow window, ref string model)
+        private static void ResetConfig(ref MainWindow window, ref string model)
         {
             window.new_alt.Visibility = Visibility.Hidden;
             window.configure_installation.Visibility = Visibility.Hidden;
