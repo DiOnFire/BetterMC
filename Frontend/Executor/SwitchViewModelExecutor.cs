@@ -1,4 +1,5 @@
 ﻿using BetterMC.Frontend.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Media;
@@ -23,6 +24,7 @@ namespace BetterMC.Frontend.Executor
             themes.Add("SettingsViewModel", Color.FromRgb(158, 158, 158));
             themes.Add("DashboardViewModel", Color.FromRgb(52, 209, 0));
             themes.Add("InstallationsViewModel", Color.FromRgb(52, 209, 0));
+            themes.Add("NewAccountViewModel", Color.FromRgb(234, 195, 0));
         }
 
         public void NewAltButtonClick()
@@ -36,44 +38,50 @@ namespace BetterMC.Frontend.Executor
 
         public void SwitchViewModel()
         {
-            MainWindow window = Current.MainWindow as MainWindow;
-            string model = (window?.DataContext as MainViewModel)?.CurrentView.GetType().Name;
+                MainWindow window = Current.MainWindow as MainWindow;
+                string model = (window?.DataContext as MainViewModel)?.CurrentView.GetType().Name;
 
-            ResetConfig(ref window, ref model);
-            
-            switch (model)
-            {
-                case "BloomwareViewModel":
+                ResetConfig(ref window, ref model);
+
+                switch (model)
                 {
-                    window.launch_button.Content = "INSTALL";
-                    window.bloomware_left.Background = new SolidColorBrush(themes[model]);
-                    break;
-                }
-                case "AltsViewModel":
-                {
-                    window.launch_button.Content = "LOGIN";
-                    window.alts_left.Background = new SolidColorBrush(themes[model]);
-                    window.new_alt.Visibility = Visibility.Visible;
-                    break;
-                }
-                case "SettingsViewModel":
-                {
-                    window.launch_button.Content = "APPLY";
-                    window.settings_left.Background = new SolidColorBrush(themes[model]);
-                    break;
-                }
-                case "DashboardViewModel":
-                {
-                    window.dashboard_left.Background = new SolidColorBrush(themes[model]);
-                    break;
-                }
-                case "InstallationsViewModel":
-                {
-                    window.launch_button.Content = "LAUNCH";
-                    window.installations_left.Background = new SolidColorBrush(themes[model]);
-                    window.configure_installation.Visibility = Visibility.Visible;    
-                    break;
-                }
+                    case "BloomwareViewModel":
+                        {
+                            window.launch_button.Content = "INSTALL";
+                            window.bloomware_left.Background = new SolidColorBrush(themes[model]);
+                            break;
+                        }
+                    case "AltsViewModel":
+                        {
+                            window.launch_button.Content = "LOGIN";
+                            window.alts_left.Background = new SolidColorBrush(themes[model]);
+                            window.new_alt.Visibility = Visibility.Visible;
+                            break;
+                        }
+                    case "SettingsViewModel":
+                        {
+                            window.launch_button.Content = "APPLY";
+                            window.settings_left.Background = new SolidColorBrush(themes[model]);
+                            break;
+                        }
+                    case "DashboardViewModel":
+                        {
+                            window.dashboard_left.Background = new SolidColorBrush(themes[model]);
+                            break;
+                        }
+                    case "InstallationsViewModel":
+                        {
+                            window.launch_button.Content = "LAUNCH";
+                            window.installations_left.Background = new SolidColorBrush(themes[model]);
+                            window.configure_installation.Visibility = Visibility.Visible;
+                            break;
+                        }
+                default:
+                    {
+                        ResetConfig(ref window, ref model);
+                        break;
+                    }
+                    
             }
         }
 

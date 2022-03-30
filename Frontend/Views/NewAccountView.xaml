@@ -27,12 +27,17 @@
                 <Button x:Name="mojang_button" Content="LOGIN USING MOJANG" Height="65" Margin="170,0" Style="{StaticResource ModernButton}" FontFamily="Poppins" Foreground="White" FontWeight="SemiBold" FontSize="30"/>
             </StackPanel>
             <StackPanel Height="75" RenderTransformOrigin="0.524,0.533">
-                <Button x:Name="offline_button" Content="LOGIN OFFLINE" Height="65" Margin="170,0" Style="{StaticResource ResourceKey=ModernButton}" FontFamily="Poppins" Foreground="White" FontWeight="SemiBold" FontSize="30" Click="mojang_button1_Click"/>
+                <Button x:Name="offline_button" Content="LOGIN USING MICROSOFT" Height="65" Margin="170,0" Style="{StaticResource ResourceKey=ModernButton}" FontFamily="Poppins" Foreground="White" FontWeight="SemiBold" FontSize="30" Click="mojang_button1_Click"/>
             </StackPanel>
         </StackPanel>
         <StackPanel RenderTransformOrigin="0.524,0.533" Margin="0,460,0,34">
-            <Button x:Name="microsoft_button" Content="MICROSOFT" Height="65" Margin="170,0,505,0" Style="{StaticResource ResourceKey=ModernButton}" FontFamily="Poppins" Foreground="White" FontWeight="SemiBold" FontSize="30" Click="mojang_button1_Click"/>
-            <Button x:Name="microsoft_button_Copy" Content="MICROSOFT" Height="65" Margin="170,0,505,0" Style="{StaticResource ResourceKey=ModernButton}" FontFamily="Poppins" Foreground="White" FontWeight="SemiBold" FontSize="30" Click="mojang_button1_Click"/>
+            <Grid Height="100">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="offline_button_Copy1" Content="LOGIN OFFLINE" Margin="170,0,170,35" Style="{StaticResource ResourceKey=ModernButton}" FontFamily="Poppins" Foreground="White" FontWeight="SemiBold" FontSize="30" Click="mojang_button1_Click" Grid.ColumnSpan="2"/>
+            </Grid>
         </StackPanel>
     </Grid>
 </UserControl>

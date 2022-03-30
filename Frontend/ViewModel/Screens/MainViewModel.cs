@@ -1,5 +1,6 @@
 ﻿using BetterMC.Core;
 using BetterMC.Frontend.Executor;
+using BetterMC.Frontend.ViewModel;
 using static System.Windows.Application;
 
 namespace BetterMC.Frontend.ViewModel
@@ -18,6 +19,7 @@ namespace BetterMC.Frontend.ViewModel
         public SettingsViewModel SettingsView { get; set; }
         public InstallationsViewModel InstallationsView { get; set; }
         public AltsViewModel AltsView { get; set; }
+        public NewAccountViewModel NewAccountView { get; set; }
 
         private object currentView;
 
@@ -29,7 +31,6 @@ namespace BetterMC.Frontend.ViewModel
                 currentView = value;
                 OnPropertyChanged();
                 if ((Current.MainWindow.DataContext as MainViewModel) != null) new SwitchViewModelExecutor().SwitchViewModel();
-
             }
         }
 
@@ -40,6 +41,7 @@ namespace BetterMC.Frontend.ViewModel
             SettingsView = new SettingsViewModel();
             InstallationsView = new InstallationsViewModel();
             AltsView = new AltsViewModel();
+            NewAccountView = new NewAccountViewModel();
 
             CurrentView = DashboardView;
             
@@ -48,6 +50,7 @@ namespace BetterMC.Frontend.ViewModel
             AltsViewCommand = new RelayCommand(o => CurrentView = AltsView);
             InstallationsViewCommand = new RelayCommand(o => CurrentView = InstallationsView);
             SettingsViewCommand = new RelayCommand(o => CurrentView = SettingsView);
+            NewAccountCommand = new RelayCommand(o => CurrentView = NewAccountView);
         }
     }
 }

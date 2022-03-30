@@ -54,7 +54,7 @@ namespace BetterMC
          */ 
         private void OnNewAltButtonClick(object sender, System.Windows.RoutedEventArgs e)
         {
-
+            new SwitchViewModelExecutor().NewAltButtonClick();
         }
 
         /*

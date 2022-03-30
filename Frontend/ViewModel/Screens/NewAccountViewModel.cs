@@ -1,6 +1,6 @@
 ﻿using BetterMC.Core;
 
-namespace BetterMC.Frontend.ViewModel.Screens
+namespace BetterMC.Frontend.ViewModel
 {
     class NewAccountViewModel : ObservableObject
     {
