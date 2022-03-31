@@ -64,7 +64,7 @@
     <Compile Include="Core\Files\ConfigLoader.cs" />
     <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
     <Compile Include="Frontend\Util\GlobalColors.cs" />
-    <Compile Include="Frontend\ViewModel\Screens\NewAccountViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\NewAccountViewModel.cs" />
     <Compile Include="Frontend\Views\NewAccountView.xaml.cs">
       <DependentUpon>NewAccountView.xaml</DependentUpon>
     </Compile>
@@ -106,10 +106,10 @@
     <Compile Include="Core\Installations\Management\InstallationsLoader.cs" />
     <Compile Include="Core\RelayCommand.cs" />
     <Compile Include="Frontend\Executor\SwitchViewModelExecutor.cs" />
-    <Compile Include="Frontend\ViewModel\Screens\AltsViewModel.cs" />
-    <Compile Include="Frontend\ViewModel\Screens\BloomwareViewModel.cs" />
-    <Compile Include="Frontend\ViewModel\Screens\InstallationsViewModel.cs" />
-    <Compile Include="Frontend\ViewModel\Screens\SettingsViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\AltsViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\BloomwareViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\InstallationsViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\SettingsViewModel.cs" />
     <Compile Include="Frontend\Views\AltsView.xaml.cs">
       <DependentUpon>AltsView.xaml</DependentUpon>
     </Compile>
@@ -157,8 +157,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Frontend\ViewModel\Screens\DashboardViewModel.cs" />
-    <Compile Include="Frontend\ViewModel\Screens\MainViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\DashboardViewModel.cs" />
+    <Compile Include="Frontend\ViewModel\MainViewModel.cs" />
     <Compile Include="Core\ObservableObject.cs" />
     <Compile Include="Frontend\Views\BloomwareView.xaml.cs">
       <DependentUpon>BloomwareView.xaml</DependentUpon>

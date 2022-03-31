@@ -73,6 +73,12 @@ namespace BetterMC.Frontend.Executor
                     window.configure_installation.Visibility = Visibility.Visible;
                     break;
                 }
+                case "NewAccountViewModel":
+                {
+                    window.launch_button.Content = "CANCEL";
+                        window.launch_button.Background = new SolidColorBrush(Colors.Black);
+                    break;
+                }
                 default:
                 {
                     ResetConfig(ref window, ref model);
