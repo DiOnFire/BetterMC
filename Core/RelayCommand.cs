@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 namespace BetterMC.Core
 {
-    class RelayCommand : ICommand
+    public class RelayCommand : ICommand
     {
         public event EventHandler CanExecuteChanged
         {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace BetterMC.Frontend.ViewModel
 {
-    class InstallationsViewModel : ObservableObject
+    public class InstallationsViewModel : ObservableObject
     {
         private List<Installation> versions = new List<Installation>();
 

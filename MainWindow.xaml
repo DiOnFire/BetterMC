@@ -7,7 +7,7 @@
         xmlns:viewModel="clr-namespace:BetterMC.Frontend.ViewModel"
         mc:Ignorable="d"
         Title="BetterMC - Minecraft launcher" Height="719" Width="1280" ResizeMode="NoResize"
-        WindowStyle="None" Background="Transparent" AllowsTransparency="True">
+        WindowStyle="None" Background="Transparent" AllowsTransparency="True" KeyDown="OnKeyDown">
 
     <Window.DataContext>
         <viewModel:MainViewModel/>

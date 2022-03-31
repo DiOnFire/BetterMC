@@ -1,4 +1,5 @@
-﻿using BetterMC.Frontend.ViewModel;
+﻿using BetterMC.Frontend.Util;
+using BetterMC.Frontend.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Windows;
@@ -31,9 +32,8 @@ namespace BetterMC.Frontend.Executor
 
         public static void Execute()
         {
-            MainWindow window = Current.MainWindow as MainWindow;
-            MainViewModel mainModel = window?.DataContext as MainViewModel;
-            string model = mainModel?.CurrentView.GetType().Name;
+            MainViewModel mainModel = Utils.GetMainViewModel();
+            string model = Utils.GetCurrentViewModel().GetType().Name;
 
             switch (model)
             {
@@ -48,8 +48,8 @@ namespace BetterMC.Frontend.Executor
 
         public static void SwitchViewModel()
         {
-            MainWindow window = Current.MainWindow as MainWindow;
-            string model = (window?.DataContext as MainViewModel)?.CurrentView.GetType().Name;
+            MainWindow window = Utils.GetMainWindow();
+            string model = Utils.GetCurrentViewModel().GetType().Name;
 
             ResetConfig(ref window, ref model);
 

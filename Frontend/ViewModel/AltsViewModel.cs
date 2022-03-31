@@ -2,7 +2,7 @@
 
 namespace BetterMC.Frontend.ViewModel
 {
-    class AltsViewModel : ObservableObject
+    public class AltsViewModel : ObservableObject
     {
     }
 }

@@ -2,7 +2,7 @@
 
 namespace BetterMC.Frontend.ViewModel
 {
-    class DashboardViewModel : ObservableObject
+    public class DashboardViewModel : ObservableObject
     {
     }
 }

@@ -4,7 +4,7 @@ using static System.Windows.Application;
 
 namespace BetterMC.Frontend.ViewModel
 {
-    internal class MainViewModel : ObservableObject
+    public class MainViewModel : ObservableObject
     {
         public RelayCommand BloomwareViewCommand { get; set; }
         public RelayCommand DashboardViewCommand { get; set; }

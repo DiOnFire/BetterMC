@@ -2,7 +2,7 @@
 
 namespace BetterMC.Frontend.ViewModel
 {
-    class SettingsViewModel : ObservableObject
+    public class SettingsViewModel : ObservableObject
     {
     }
 }

@@ -64,6 +64,7 @@
     <Compile Include="Core\Files\ConfigLoader.cs" />
     <Compile Include="Core\Installations\Loader\LaunchArguments.cs" />
     <Compile Include="Frontend\Util\GlobalColors.cs" />
+    <Compile Include="Frontend\Util\Utils.cs" />
     <Compile Include="Frontend\ViewModel\NewAccountViewModel.cs" />
     <Compile Include="Frontend\Views\NewAccountView.xaml.cs">
       <DependentUpon>NewAccountView.xaml</DependentUpon>

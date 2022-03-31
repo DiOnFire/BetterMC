@@ -2,7 +2,7 @@
 
 namespace BetterMC.Frontend.ViewModel
 {
-    class NewAccountViewModel : ObservableObject
+    public class NewAccountViewModel : ObservableObject
     {
     }
 }
