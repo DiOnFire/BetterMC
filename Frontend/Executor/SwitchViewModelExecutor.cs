@@ -14,14 +14,14 @@ namespace BetterMC.Frontend.Executor
      */
     public static class SwitchViewModelExecutor
     {
-        private static readonly Dictionary<string, Color> themes = new Dictionary<string, Color>()
+        private static readonly Dictionary<string, SolidColorBrush> themes = new Dictionary<string, SolidColorBrush>()
         {
-            { "BloomwareViewModel", Color.FromRgb(164, 11, 191) },
-            { "AltsViewModel", Color.FromRgb(234, 195, 0) },
-            { "SettingsViewModel", Color.FromRgb(158, 158, 158) },
-            { "DashboardViewModel", Color.FromRgb(52, 209, 0) },
-            { "InstallationsViewModel", Color.FromRgb(52, 209, 0) },
-            { "NewAccountViewModel", Color.FromRgb(234, 195, 0) }
+            { "BloomwareViewModel", new SolidColorBrush(Color.FromRgb(164, 11, 191)) },
+            { "AltsViewModel", new SolidColorBrush(Color.FromRgb(234, 195, 0)) },
+            { "SettingsViewModel", new SolidColorBrush(Color.FromRgb(158, 158, 158)) },
+            { "DashboardViewModel", new SolidColorBrush( Color.FromRgb(52, 209, 0)) },
+            { "InstallationsViewModel", new SolidColorBrush(Color.FromRgb(52, 209, 0)) },
+            { "NewAccountViewModel", new SolidColorBrush( Color.FromRgb(30, 30, 30)) }
         };
         private static readonly SolidColorBrush EMPTY = new SolidColorBrush(Color.FromArgb(0, 0, 0, 0));
 
@@ -58,38 +58,38 @@ namespace BetterMC.Frontend.Executor
                 case "BloomwareViewModel":
                 {
                     window.launch_button.Content = "INSTALL";
-                    window.bloomware_left.Background = new SolidColorBrush(themes[model]);
+                    window.bloomware_left.Background = themes[model];
                     break;
                 }
                 case "AltsViewModel":
                 {
                     window.launch_button.Content = "LOGIN";
-                    window.alts_left.Background = new SolidColorBrush(themes[model]);
+                    window.alts_left.Background = themes[model];
                     window.new_alt.Visibility = Visibility.Visible;
                     break;
                 }
                 case "SettingsViewModel":
                 {
                     window.launch_button.Content = "APPLY";
-                    window.settings_left.Background = new SolidColorBrush(themes[model]);
+                    window.settings_left.Background = themes[model];
                     break;
                 }
                 case "DashboardViewModel":
                 {
-                    window.dashboard_left.Background = new SolidColorBrush(themes[model]);
+                    window.dashboard_left.Background = themes[model];
                     break;
                 }
                 case "InstallationsViewModel":
                 {
                     window.launch_button.Content = "LAUNCH";
-                    window.installations_left.Background = new SolidColorBrush(themes[model]);
+                    window.installations_left.Background = themes[model];
                     window.configure_installation.Visibility = Visibility.Visible;
                     break;
                 }
                 case "NewAccountViewModel":
                 {
                     window.launch_button.Content = "CANCEL";
-                        window.launch_button.Background = new SolidColorBrush(Colors.Black);
+                    window.launch_button.Background = themes[model];
                     break;
                 }
                 default:
@@ -104,7 +104,7 @@ namespace BetterMC.Frontend.Executor
         {
             window.new_alt.Visibility = Visibility.Hidden;
             window.configure_installation.Visibility = Visibility.Hidden;
-            window.launch_button.Background = new SolidColorBrush(themes[model]);
+            window.launch_button.Background = themes[model];
             window.alts_left.Background = EMPTY;
             window.bloomware_left.Background = EMPTY;
             window.settings_left.Background = EMPTY;
