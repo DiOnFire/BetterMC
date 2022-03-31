@@ -6,19 +6,19 @@ namespace BetterMC.Frontend.ViewModel
 {
     internal class MainViewModel : ObservableObject
     {
-        public RelayCommand BloomwareViewCommand;
-        public RelayCommand DashboardViewCommand;
-        public RelayCommand AltsViewCommand;
-        public RelayCommand InstallationsViewCommand;
-        public RelayCommand SettingsViewCommand;
-        public RelayCommand NewAccountCommand;
+        public RelayCommand BloomwareViewCommand { get; set; }
+        public RelayCommand DashboardViewCommand { get; set; }
+        public RelayCommand AltsViewCommand { get; set; }
+        public RelayCommand InstallationsViewCommand { get; set; }
+        public RelayCommand SettingsViewCommand { get; set; }
+        public RelayCommand NewAccountCommand { get; set; }
 
-        public DashboardViewModel DashboardView;
-        public BloomwareViewModel BloomwareView;
-        public SettingsViewModel SettingsView;
-        public InstallationsViewModel InstallationsView;
-        public AltsViewModel AltsView;
-        public NewAccountViewModel NewAccountView;
+        public DashboardViewModel DashboardView { get; set; }
+        public BloomwareViewModel BloomwareView { get; set; }
+        public SettingsViewModel SettingsView { get; set; }
+        public InstallationsViewModel InstallationsView { get; set; }
+        public AltsViewModel AltsView { get; set; }
+        public NewAccountViewModel NewAccountView { get; set; }
 
         private object currentView;
 

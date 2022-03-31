@@ -65,5 +65,10 @@ namespace BetterMC
         {
 
         }
+
+        private void OnMainButtonClick(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+        }
     }
 }

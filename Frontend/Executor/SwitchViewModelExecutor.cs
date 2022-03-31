@@ -31,6 +31,19 @@ namespace BetterMC.Frontend.Executor
 
         public static void Execute()
         {
+            MainWindow window = Current.MainWindow as MainWindow;
+            MainViewModel mainModel = window?.DataContext as MainViewModel;
+            string model = mainModel?.CurrentView.GetType().Name;
+
+            switch (model)
+            {
+                case "NewAccountViewModel":
+                    {
+                        mainModel.CurrentView = mainModel.AltsView;
+                        break;
+                    }
+                
+            }
         }
 
         public static void SwitchViewModel()
