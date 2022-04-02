@@ -74,5 +74,10 @@ namespace BetterMC.Core.Accounts
         {
 
         }
+
+        #region operators
+        public static bool operator ==(Account a, Account b) => a.GetType() == b.GetType() && a.Login == b.Login && a.Password == b.Password;
+        public static bool operator !=(Account a, Account b) => a.GetType() != b.GetType() || a.Login != b.Login || a.Password != b.Password;
+        #endregion
     }
 }

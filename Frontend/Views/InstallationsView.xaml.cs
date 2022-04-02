@@ -3,13 +3,14 @@ using BetterMC.Core.Installations.Management;
 using BetterMC.Theme.Installations;
 using System.Collections.Generic;
 using System.Windows.Controls;
+using System;
 
 namespace BetterMC.Frontend.Views
 {
     /// <summary>
     /// Логика взаимодействия для InstallationsView.xaml
     /// </summary>
-    public partial class InstallationsView : UserControl
+    public partial class InstallationsView : UserControl, IDisposable
     {
         public InstallationsView()
         {
@@ -28,6 +29,11 @@ namespace BetterMC.Frontend.Views
                 int index = installations_panel.Children.Count;
                 installations_panel.Children.Insert(index, new InstallationControl(version[i]));
             }
+        }
+
+        public void Dispose()
+        {
+            installations_panel.Children.Clear();
         }
     }
 }

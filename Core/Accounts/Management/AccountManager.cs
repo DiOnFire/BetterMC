@@ -5,26 +5,21 @@ namespace BetterMC.Core.Accounts.Management
 {
     sealed class AccountManager
     {
-        private List<Account> accounts = new List<Account>();
+        #region fields
+        private List<Account> accounts;
 
-        public void Load()
+        public List<Account> Accounts
         {
-            AccountLoader loader = new AccountLoader();
+            get { return accounts; }
         }
+        #endregion
 
-        public void AddAccount(Account account)
-        {
-            accounts.Add(account);
-        }
+        public AccountManager() => accounts = new List<Account>();
 
-        public void RemoveAccount(Account account)
-        {
-            accounts.Remove(account);
-        }
+        #region methods
+        public void AddAccount(Account account) => accounts.Add(account);
 
-        public List<Account> GetAccounts()
-        {
-            return accounts;
-        }
+        public void DeleteAccount(Account account) => accounts.Remove(account);
+        #endregion
     }
 }

@@ -1,6 +1,7 @@
 ﻿using BetterMC.Core;
 using BetterMC.Core.Installations;
 using BetterMC.Core.Installations.Management;
+using System;
 using System.Collections.Generic;
 
 namespace BetterMC.Frontend.ViewModel
@@ -20,6 +21,10 @@ namespace BetterMC.Frontend.ViewModel
             string mc = loader.FindMinecraft();
             string[] version = loader.GetVersionPaths(ref mc);
             versions.AddRange(loader.LoadInstallations(version));
+        }
+
+        ~InstallationsViewModel() {
+            versions = null;
         }
     }
 }
