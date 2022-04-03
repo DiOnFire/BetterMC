@@ -69,6 +69,9 @@
     <Compile Include="Frontend\Views\NewAccountView.xaml.cs">
       <DependentUpon>NewAccountView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Theme\Accounts\AccountControl.xaml.cs">
+      <DependentUpon>AccountControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Theme\Basic\Popup.xaml.cs">
       <DependentUpon>Popup.xaml</DependentUpon>
     </Compile>
@@ -129,6 +132,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Frontend\Views\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Theme\Accounts\AccountControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -199,6 +206,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\ModLoaders\basic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Accounts\Cracked.png" />
+    <Resource Include="Assets\Accounts\Microsoft.png" />
+    <Resource Include="Assets\Accounts\Mojang.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
